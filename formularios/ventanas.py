@@ -37,15 +37,9 @@ def ventanas():
     root.geometry("1280x720")
     root.iconbitmap("images.ico")
     nombre = StringVar()
+    apellido=StringVar()
     numero = IntVar()
-    image = PhotoImage(file = "images.gif")
-    image = image.subsample(1,1)
-    label=Label(image=image)
-    label.pack()
-    Label(text="ACCESO AL SISTEMA",  fg="navy",width="300",height="1", font=("calibri", 25)).pack()
-
-    Label(text="DEL GYM",  fg="navy",width="300",height="1", font=("calibri", 25)).pack()
-    Label(text="").pack()
+    
 #INCLUIMOS PANEL PARA LAS PESTAÑAS.
     nb = ttk.Notebook(root)
     nb.pack(fill='both',expand='yes')
@@ -57,9 +51,29 @@ def ventanas():
     p4 = ttk.Frame(nb)
     p5 = ttk.Frame(nb)
 
-#ELEMENTOS PESTAÑA Saludo.
-    Button(p1, text='Saludar',bg='light blue',command=saludo).place(x=225,y=160)
-    Entry(p1, textvariable=nombre).place(x=190,y=70)
+#ELEMENTOS PESTAÑA registro
+    Label(p1, text="Nombre").place(x=50, y=50)
+    Entry(p1, textvariable=nombre).place(x=190,y=50,width=200)
+    Label(p1, text="Apellido").place(x=50, y=80)
+    Entry(p1, textvariable=apellido).place(x=190,y=80,width=200)
+    Label(p1, text="DNI Nº").place(x=50, y=110)
+    dni=IntVar
+    Entry(p1, textvariable=dni).place(x=190,y=110,width=200)
+    Label(p1, text="Domicilio").place(x=50, y=140)
+    domicilio=StringVar
+    Entry(p1, textvariable=domicilio).place(x=190,y=140,width=200)
+    Label(p1, text="Email").place(x=50, y=170)
+    email=StringVar
+    Entry(p1, textvariable=email).place(x=190,y=170,width=200)
+    Label(p1, text="Telefono").place(x=50, y=200)
+    telefono=StringVar
+    Entry(p1, textvariable=telefono).place(x=190,y=200,width=200)
+    Label(p1, text="Mes de cuota").place(x=50, y=230)
+    cuota=StringVar
+    Entry(p1, textvariable=cuota).place(x=190,y=230,width=200)
+    
+    Button(p1, text='REGISTRAR',bg='light blue',command=saludo).place(x=225,y=330)
+    
 #ELEMENTOS PESTAÑA Suma5.
     Button(p2, text='Suma5',bg='light blue',command=suma5).place(x=225,y=160)
     Entry(p2, textvariable=numero).place(x=190,y=70)

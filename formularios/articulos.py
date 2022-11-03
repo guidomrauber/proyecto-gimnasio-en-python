@@ -1,9 +1,9 @@
-import mysql.connector
+import pymysql
 
 class Articulos:
 
     def abrir(self):
-        conexion=mysql.connector.connect(host="localhost", 
+        conexion=pymysql.connect(host="localhost", 
                                               user="root", 
                                               passwd="", 
                                               database="bd1")
