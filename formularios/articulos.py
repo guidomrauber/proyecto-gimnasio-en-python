@@ -6,14 +6,14 @@ class Articulos:
         conexion=pymysql.connect(host="localhost", 
                                               user="root", 
                                               passwd="", 
-                                              database="bd1")
+                                              database="bd3")
         return conexion
 
 
     def alta(self, datos):
         cone=self.abrir()
         cursor=cone.cursor()
-        sql="insert into articulos(descripcion, precio) values (%s,%s)"
+        sql="insert into clientes (nombre,apellido,dni,domicilio,email,telefono,cuota) values (%s,%s,%s,%s,%s,%s,%s)"
         cursor.execute(sql, datos)
         cone.commit()
         cone.close()

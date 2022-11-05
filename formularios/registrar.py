@@ -8,7 +8,7 @@ import pymysql
 def registrar():
     global pantalla2
     pantalla2 =tk.Tk()
-    pantalla2.geometry("800x600")
+    pantalla2.geometry("1280x720")
     pantalla2.title("REGISTRO")
     pantalla2.iconbitmap("images.ico")
 

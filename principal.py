@@ -5,9 +5,8 @@ from tkinter import ttk
 from tkinter import messagebox
 import formularios.login
 import formularios.registrar
-
-
-import formularios.ventanas
+import formularios.registrar2
+import formularios.articulos
 def inicio_sesion():
     formularios.login.mostrar() 
     

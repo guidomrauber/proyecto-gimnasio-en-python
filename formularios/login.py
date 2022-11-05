@@ -4,7 +4,8 @@ import tkinter as tk
 from tkinter import ttk
 from tkinter import messagebox
 import pymysql
-import formularios.ventanas
+import formularios.registrar2
+import formularios.principal2 
 def mostrar():
     global pantalla1
     pantalla1 = tk.Tk()
@@ -49,7 +50,7 @@ def validacion_datos():
     self=""
     if (result)>0:
            
-       articulo1=formularios.ventanas.ventanas()
+       articulo1=formularios.principal2.app()
     else:
             messagebox.showinfo("Información", "USUARIO Y CONTRASEÑA INCORRECTO")
     conexion1.close()
