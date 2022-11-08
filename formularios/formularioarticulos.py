@@ -82,18 +82,22 @@ class FormularioArticulos:
         self.cuaderno1.add(self.pagina3, text="Listado completo")
         self.labelframe3=ttk.LabelFrame(self.pagina3, text="Artículo")
         self.labelframe3.grid(column=0, row=0, padx=5, pady=10)
-        self.boton1=ttk.Button(self.labelframe3, text="Listado completo", command=self.listar)
+        self.boton1=ttk.Button(self.labelframe3, text="Listado completo",command=self.listar)
         self.boton1.grid(column=0, row=0, padx=4, pady=4)
-        self.scrolledtext1=st.ScrolledText(self.labelframe3, width=30, height=10)
+        self.scrolledtext1=st.ScrolledText(self.labelframe3, width=100, height=10)
         self.scrolledtext1.grid(column=0,row=1, padx=10, pady=10)
 
     def listar(self):
         respuesta=self.articulo1.recuperar_todos()
         self.scrolledtext1.delete("1.0", tk.END)        
         for fila in respuesta:
-            self.scrolledtext1.insert(tk.END, "código:"+str(fila[0])+
-                                              "\ndescripción:"+fila[1]+
-                                              "\nprecio:"+str(fila[2])+"\n\n")
+            self.scrolledtext1.insert(tk.END, "nombre:"+str(fila[0])+
+                                              "\napellido:"+fila[1]+
+                                              "\ndni"+str(fila[2])+
+                                              "\ndomicilio:"+fila[3]+
+                                              "\nemail:"+fila[4]+
+                                              "\ntelefono:"+fila[5]+
+                                              "\ncuota:"+str(fila[6])+"\n\n")
 
     def borrado(self):
         self.pagina4 = ttk.Frame(self.cuaderno1)

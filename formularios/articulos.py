@@ -29,7 +29,7 @@ class Articulos:
     def recuperar_todos(self):
         cone=self.abrir()
         cursor=cone.cursor()
-        sql="select codigo, descripcion, precio from articulos"
+        sql="select nombre,apellido,dni,domicilio,email,telefono,cuota from clientes"
         cursor.execute(sql)
         cone.close()
         return cursor.fetchall()

@@ -71,7 +71,7 @@ def inserta_datos():
                                 passwd='',
                                 db='bd3')
     cursor1=conexion1.cursor()
-    sql="INSERT INTO clientes (nombre, apellido, dni,domicilio, email,telefono) VALUES (%s,%s,%s,%s,%s,%s,%s)"
+    sql="INSERT INTO clientes (nombre, apellido, dni,domicilio,email,telefono,cuota) VALUES (%s,%s,%s,%s,%s,%s,%s)"
     datos=(nusuario2_ver.get(),contr2_ver.get(),dni2_ver.get(),domi2_ver.get(),email.get(),telefono.get(),cuota.get())
     
     try:
