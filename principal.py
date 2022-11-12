@@ -7,8 +7,11 @@ import formularios.login
 import formularios.registrar
 import formularios.registrar2
 import formularios.articulos
-import formularios.listado
 import formularios.ventana
+import formularios.consulta
+import formularios.countries
+import formularios.articulos
+from formularios.countries import *
 def inicio_sesion():
     formularios.login.mostrar() 
     
